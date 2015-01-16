@@ -7,7 +7,7 @@ var MockUI       = require('ember-cli/tests/helpers/mock-ui');
 var MockRegistry = require('../../helpers/mock-registry');
 var MockAdapter  = require('../../helpers/mock-adapter');
 
-describe('tasks/activate', function() {
+describe('tasks/deploy-activate', function() {
   var ActivtateTask;
   var subject;
   var options, runOptions;
@@ -15,7 +15,7 @@ describe('tasks/activate', function() {
   var mockUI;
 
   before(function() {
-    ActivtateTask = require('../../../lib/tasks/activate');
+    ActivtateTask = require('../../../lib/tasks/deploy-activate');
 
     succeeded = function(value) {
       if (value) {
@@ -63,7 +63,7 @@ describe('tasks/activate', function() {
       .then(function() {
         assert.ok(false,'Should have rejected due to missing key');
       }, function(error) {
-        assert.include(error.message, 'The `ember activate` command requires a deploy version to be specified.');
+        assert.include(error.message, 'The `ember deploy:activate` command requires a deploy version to be specified.');
       });
   });
 

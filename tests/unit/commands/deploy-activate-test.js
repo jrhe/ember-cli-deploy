@@ -18,7 +18,7 @@ describe('activate command', function() {
       })
     };
 
-    subject = require('../../../lib/commands/activate');
+    subject = require('../../../lib/commands/deploy-activate');
 
     subject._tasks = tasks;
     subject._registry = MockRegistry;

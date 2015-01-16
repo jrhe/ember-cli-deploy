@@ -82,7 +82,7 @@ describe('tasks/deploy-index', function() {
 
     return subject.run({environment: 'development'})
       .then(function() {
-        assert.equal(mockUI.output, 'ember activate aaa\n');
+        assert.equal(mockUI.output, 'ember deploy:activate aaa\n');
       }, function() {
         assert.ok(false, 'Should have resolved');
       });
